@@ -171,7 +171,7 @@ nav {
 
 #hero {
     /* Altura y Compensación del Header Fijo (Escritorio) */
-    height: calc(100vh - 75px);
+    height: auto;
     min-height: 500px; 
     
     
@@ -181,6 +181,7 @@ nav {
     background: var(--gradient-2);
     position: relative;
     overflow: hidden;
+	padding-top: 71.65px; /* Compensación para el header fijo */
 }
 
 /* Contenedor del Hero (ESCRITORIO: Lado a Lado) */
@@ -209,7 +210,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    height: auto;
     z-index: 10;
     max-width: 800px;
     position: relative;
@@ -238,6 +239,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
+	position: relative;
 }
 
 .hero-img-responsive {
@@ -269,16 +271,18 @@ nav {
 }
 
 .etiqueta-imagen {
-	position: absolute;
+	color: #fff;
 	text-transform: uppercase;
-	bottom: 25px;
-	right: 200px;
-	background: transparent;
-	color: white;
-	padding: 10px 20px 8px;
-	border: white 1px solid;
+	border: 1px solid #fff;
 	border-radius: 20px;
+	padding: 10px 20px 8px;
 	font-size: 14px;
+	line-height: 1;
+
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	background: transparent;
 	z-index: 15;
 }
 
@@ -323,9 +327,9 @@ nav {
     
     .hero-image {
         width: 100%;
-        margin-top: 1.5rem; /* Espacio entre texto e imagen */
-        height: 100vh;
-		display: flex;
+        margin-top: 0; /* Espacio entre texto e imagen */
+        height: 1vh; /* Altura ajustada para móvil */
+		display: inline-block;
 		align-items: stretch;
 		flex-grow: 1;
 		position: relative;
@@ -334,23 +338,27 @@ nav {
     .hero-img-responsive {
         max-width: 100%;
     	width: 100%; /* ✅ Esto hace que ocupe todo el ancho de su contenedor */
-    	height: 100%; /* ✅ Esto hace que ocupe todo el alto de su contenedor */
+    	height: auto; /* ✅ Esto hace que ocupe todo el alto de su contenedor */
     
     	/* Esto asegura que la imagen cubra todo el espacio, incluso si recorta un poco */
-    	object-fit: cover; 
+    	object-fit: cover;
+		display: block; 
     	
     }
 	.etiqueta-imagen {
-		position: absolute;
+		color: #fff;
 		text-transform: uppercase;
-		bottom: 50px;
-		right: 25px;
+		border: 1px solid #fff;
+		border-radius: 20px;
+		padding: 10px 20px 8px;
+		font-size: 14px;
+		line-height: 1;
+		
+		position: absolute;
+		bottom: 25px;
+		left: 25px;
 		background: transparent;
 		color: white;
-		padding: 5px 10px 4px;
-		border: white 1px solid;
-		border-radius: 20px;
-		font-size: 0.8rem;
 		z-index: 15;
 		white-space: nowrap;
 	}
@@ -882,18 +890,20 @@ nav {
 }
 
 .practice-icon-new {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	background: var(--gradient-2);
 	border-radius: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 2rem;
+	font-size: 1.8rem;
+	flex-shrink: 0;
+	min-width: 50px;
 }
 
 .practice-info h3 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	color: var(--dark);
 	margin-bottom: 0.3rem;
 }
