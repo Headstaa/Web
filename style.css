@@ -1362,7 +1362,7 @@ nav {
     right: 40px;  /* Distancia desde el borde derecho */
     
     /* Estilo visual (Color de WhatsApp) */
-    background-color: #25d366; 
+    background-color: #21c063; 
     color: #FFF;
     border-radius: 50px; /* Lo hace circular */
     text-align: center;
@@ -1379,6 +1379,16 @@ nav {
 .whatsapp-float:hover {
     background-color: #128c7e;
 }
+
+@media (max-width: 767px) {
+	.whatsapp-float {
+		width: 50px;
+		height: 50px;
+		bottom: 20px;
+		right: 20px;
+		font-size: 24px;
+		line-height: 50px;
+	}
 
 /* Footer */
 footer {
